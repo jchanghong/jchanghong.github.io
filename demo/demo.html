@@ -1,0 +1,61 @@
+---
+layout: page
+---
+		
+
+
+<link href="/asserts/css/blog_demo.css" rel="stylesheet"  />
+	
+<div class="demo-container">
+		<!-- 个人简介-->
+		<div class="markdown-body">
+			<div class="title-container">
+				<h1 class="page-title"><a  title="about"></a> </h1>
+			
+			<section class="right-tips">
+				<span >
+					Demo
+				</span>
+			</section>	
+			</div>
+
+			<div class="content-container ">
+<!--请保持dom结构,grid-container,grid,grid-item 命名可以更换 -->				
+<div class="grid-container">
+	
+				
+<div class="grid">
+
+
+			 		{% for cat in site.categories %}
+			 		{% capture cateTag %}{{ cat[0] }}{% endcapture %}
+					{% if cateTag == site.demoTag %}
+					    {% for post in cat[1] %}
+					    
+					   <div class="grid-item">
+						        <a class="demo-img" href="{{post.show}}">
+						            <img src="{{post.pic}}">
+						        </a>
+						        <h3 class="demo-title">
+						            <a href="{{post.url}}">{{post.title}}</a>
+						        </h3>
+						        <p>主要技术：{{post.technology}}</p>
+						        <p>{{post.description}}
+						            <a href="{{post.src}}">源代码 <i class="icon icon-code" ></i></a>
+						        </p>
+						</div>
+					    {% endfor %}
+    
+					{% endif %}
+					{% endfor %}
+    
+</div>
+</div>	
+ 			</div> 
+  		</div>
+  
+        <!-- 多说-->
+		{% include litemplate/duoshuo %}
+</div>
+<script type="text/javascript" src="/asserts/js/waterfallFlow.js" ></script>
+<script type="text/javascript" src="/asserts/js/demo.js" ></script>

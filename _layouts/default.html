@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="author" content="jchanghong" />
+    <meta name="renderer" content="webkit">
+    <meta name="description" content="Everything about jchanghong" />
+    <meta name="baidu-site-verification" content="cVrw8PsZv7" />
+    <meta name="keywords" content="jchanghong,jchanghong,jchanghong的博客,jchanghong的博客" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  	<link href="/asserts/css/default.css" rel="stylesheet" type="text/css" media="all">
+	<script type="text/javascript" src="/asserts/js/app.js" ></script> 
+</head>
+<body>
+	<!--头部 -->
+	<header class="header">
+		<div class="header-container">
+			<section class="site-logo">
+				<a  href="/">{{ site.author.nickName }}</a>
+			</section>
+			<button class="collapsed " type="button" >
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		    </button>
+		    <div class="menu-container">
+				<nav class="site-nav">
+					<ul>
+						<!--<li>-->
+							<!--<a  href="/blog/archiveAll.html">随笔</a>-->
+						<!--</li>-->
+						<li>
+							<a  href="/blog/archive.html">博客</a>
+						</li>
+						<li>
+							<a  href="/blog/categories.html">分类</a>
+						</li>
+						<li>
+							<a  href="/blog/tags.html">标签</a>
+						</li>
+						<li>
+							<a  href="/demo/demo.html">Demo</a>
+						</li>
+						<!--<li>-->
+							<!--<a  href="/favour/music.html">音乐</a>-->
+						<!--</li>-->
+						<!--<li>-->
+							<!--<a  href="/favour/book.html">Book</a>-->
+						<!--</li>-->
+						<li>
+							<a  href="/about/timeline.html">时间轴</a>
+						</li>
+						<li>
+							<a  href="/others/collection.html">收藏</a>
+						</li>
+						<li>
+							<a  href="/about/about.html">关于</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="site-search">
+					<input type="text" />
+				</div>
+			</div>
+		</div>
+	</header>
+	{{content}}
+	
+	<!-- 脚步,包括版权声明，访问次数等-->
+	<footer class="footer">
+	    <p class="copyright">
+	    	<small>
+	            <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/cn/" target="_blank" title="许可协议">©</a> 2016&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about/">{{site.author.name}}</a>
+	        </small>
+	    </p>
+	    <p class="more-tips">
+	    	<span>Powered by Jekyll</span>&nbsp;&nbsp;&nbsp;&nbsp;
+	    	<span id="busuanzi_container_site_pv">总访客<span id="busuanzi_value_site_uv" class="site-uv"></span>人</span>&nbsp;&nbsp;&nbsp;&nbsp;
+	    	<span id="busuanzi_container_site_pv">总访问<span id="busuanzi_value_site_pv" class="site-pv"></span>次</span>
+	    </p>  
+	</footer>
+{% if site.baidu_analytics_id %}
+<script>
+//百度统计
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?{{site.baidu_analytics_id}}";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+{% endif %}
+<!--不蒜子 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+</body>
+</html>

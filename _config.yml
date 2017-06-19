@@ -1,0 +1,41 @@
+auto: true
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+# paginate 分页
+gems: [jekyll-paginate]
+paginate: 6
+permalink: /:year/:month/:day/:title.html
+
+feed: /feed.xml
+#这个tag用来判断book类型的博文，不展示在文章列表中，只在读后感里找到
+bookTag: book
+#几类标识，已读，正在读，未读,自动从markdown文章里生成书籍列表
+bookTypeReaded: readed
+bookTypeReading: reading
+bookTypeToRead: toread
+#这个tag用来判断音乐类型的博文，和book一样，都是默认不显示的
+musicTag: music
+#这个tag用来判断项目类型
+demoTag: project
+# excerpt 前期考虑用excerpt作为文章摘要,后面发出会影响统一样式，于是放弃了
+#excerpt_separator: "\n\n\n\n"
+#多说插件使用自己的 short_name
+duoshuo_shortname: jchanghong
+#百度统计标识
+baidu_analytics_id: cf8506e0ef223e57ff6239944e5d46a4
+
+url: https://jchanghong.github.io
+title: jchanghong的个人主页
+description: 记录个人成长的点点滴滴
+author_info: <a href="https://jchanghong.github.io/">jchanghong</a>
+author :
+  name : jchanghong
+  nickName : jchanghong
+  intro: 认真的码农
+  email : jiangcanghong@gmail.com
+  github : jchanghong
+  githubUrl: https://github.com/jchanghong
+  

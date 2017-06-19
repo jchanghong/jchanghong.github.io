@@ -1,0 +1,139 @@
+---
+layout: page
+---
+		
+
+<link href="/asserts/css/blog_flip_card.css" rel="stylesheet"  />
+<link href="/asserts/css/blog_book.css" rel="stylesheet"  />
+
+
+
+<div class="demo-container">
+		<!-- 个人简介-->
+		<div class="markdown-body">
+			<div class="title-container">
+				<h1 class="page-title"><a  title="about"></a> </h1>
+			
+			<section class="right-tips">
+				<span >
+					Book
+				</span>
+			</section>	
+			</div>
+
+			<div class="content-container ">
+				<h2 class="read-tag">读过...</h2>
+				<div class="book-read-before">
+			 		
+			 		{% for cat in site.categories %}
+			 		{% capture cateTag %}{{ cat[0] }}{% endcapture %}
+					{% if cateTag == site.bookTag %}
+					    {% for post in cat[1] %}
+					    {% capture targetTag %}{{ post.bookType}}{% endcapture %}
+					    {% if targetTag == site.bookTypeReaded %}
+					    
+					   <div class="flip-container book-card">
+							 <div class=" viewport-flip cover-flip-item" title="点击翻面">
+								<div class="flip-item flip  cover-flip-front ">
+									<a class="demo-img" href="{{post.url}}">
+		            					<img src="{{post.cover}}">
+		        					</a>
+								</div>
+								<div class="flip-item flip out cover-flip-back">
+									<h3 class="demo-title">
+							            <a href="{{post.url}}">{{post.title}}</a>
+							            <p class="title-en">{{post.title_en}}</p>
+							        </h3>
+							        <p>
+							        	{{post.description}}
+							        </p>
+									
+								</div>
+							</div> 		 	
+						</div>
+					 	{% endif %}
+					    {% endfor %}
+    
+					{% endif %}
+					{% endfor %}
+				</div>
+				<h2 class="read-tag">在读...</h2>
+				<div class="book-read-now">
+		 		{% for cat in site.categories %}
+			 		{% capture cateTag %}{{ cat[0] }}{% endcapture %}
+					{% if cateTag == site.bookTag %}
+					    {% for post in cat[1] %}
+					    {% capture targetTag %}{{ post.bookType}}{% endcapture %}
+					    {% if targetTag == site.bookTypeReading %}
+					    
+					   <div class="flip-container book-card">
+							 <div class=" viewport-flip cover-flip-item" title="点击翻面">
+								<div class="flip-item flip  cover-flip-front ">
+									<a class="demo-img" href="{{post.url}}">
+		            					<img src="{{post.cover}}">
+		        					</a>
+								</div>
+								<div class="flip-item flip out cover-flip-back">
+									<h3 class="demo-title">
+							            <a href="{{post.url}}">{{post.title}}</a>
+							            <p class="title-en">{{post.title_en}}</p>
+							        </h3>
+							        <p>
+							        	{{post.description}}
+							        </p>
+									
+								</div>
+							</div> 		 	
+						</div>
+					 	{% endif %}
+					    {% endfor %}
+    
+					{% endif %}
+					{% endfor %}
+				 
+				</div>
+				<h2 class="read-tag">想读...</h2>
+				<div class="book-read-after">
+		 		{% for cat in site.categories %}
+			 		{% capture cateTag %}{{ cat[0] }}{% endcapture %}
+					{% if cateTag == site.bookTag %}
+					    {% for post in cat[1] %}
+					    {% capture targetTag %}{{ post.bookType}}{% endcapture %}
+					    {% if targetTag == site.bookTypeToRead %}
+					    
+					   <div class="flip-container book-card">
+							 <div class=" viewport-flip cover-flip-item" title="点击翻面">
+								<div class="flip-item flip  cover-flip-front ">
+									<a class="demo-img" href="{{post.url}}">
+		            					<img src="{{post.cover}}">
+		        					</a>
+								</div>
+								<div class="flip-item flip out cover-flip-back">
+									<h3 class="demo-title">
+							            <a href="{{post.url}}">{{post.title}}</a>
+							            <p class="title-en">{{post.title_en}}</p>
+							        </h3>
+							        <p>
+							        	{{post.description}}
+							        </p>
+									
+								</div>
+							</div> 		 	
+						</div>
+					 	{% endif %}
+					    {% endfor %}
+    
+					{% endif %}
+					{% endfor %}				 
+				</div>
+				 
+				 
+ 			</div> 
+  		</div>
+  
+        <!-- 多说-->
+		{% include litemplate/duoshuo %}
+</div>
+    
+
+<script type="text/javascript" src="/asserts/js/book.js" ></script>

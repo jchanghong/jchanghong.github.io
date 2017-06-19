@@ -1,0 +1,73 @@
+---
+layout: default
+---
+		
+
+
+<link href="/asserts/css/blog_article_post.css" rel="stylesheet" type="text/css" media="all">
+<link href="/asserts/css/blog_personCard_style.css" rel="stylesheet" type="text/css" media="all">
+<link href="/asserts/css/imageBubble.css" rel="stylesheet" type="text/css" media="all">
+	
+	<div class="wrap">
+		<div class="container">
+			<!-- 左侧，内容，多说评论等-->
+			<div class="col-md-9">
+				<!-- 内容-->
+				<div class="markdown-body">
+					<!--标题区域 -->
+					<div class="title-container">
+					<h1 class="page-title"><a  title="{{ page.title }}">{{ page.title }}</a> </h1>
+						<!-- metainfo-->
+						{% include litemplate/metainfo %}
+						<section class="right-tips">
+							<span >
+								{{page.favour}}
+							</span>
+						</section>
+					</div>
+					<!-- 特别推荐-->
+					{% if page.star %}
+					<div class="tag-favour">
+						<img src="/asserts/images/img_favour_star_1.png" />
+					</div>
+					{% endif %}
+					<!-- 内容区域-->
+					<div class="content-container">
+						 {{ content }}
+					</div>
+					<!-- 上一篇与下一篇-->
+					<section align="right" class="post-next-prev">
+					  <span>
+					    <a {% if page.previous %} href="{{ page.previous.url }}" class="active"{% endif %} {% unless page.previous %} class="pageNavInvalid" {% endunless %} >上一篇</a>
+					    &nbsp;&nbsp;&nbsp;
+					    <a {% if page.next %} href="{{ page.next.url }}" class="active"{% endif %} {% unless page.next %} class="pageNavInvalid" {% endunless %} >下一篇</a>
+					  </span>
+					</section>
+				</div>
+				<!-- 多说-->
+				{% include litemplate/duoshuo %}
+				
+				
+			</div>
+			
+			<!-- 右侧包括个人介绍，TOC菜单-->
+			<div class="col-md-3">
+				<!-- 右侧人物面板-->
+				<div class="effect1 person-card">
+					{% include litemplate/personcard %}
+				</div>
+
+				 <!-- TOC动态菜单-->
+				  <div class="slideNavContainer">     
+				</div> 				
+					
+			</div> 
+ 
+		</div>
+	</div>
+		
+<script type="text/javascript" src="/asserts/js/post.js" ></script>
+<script type="text/javascript" src="/asserts/js/imageBubble.js" ></script>
+<script>
+	ImageBubble.init('.container img');
+</script>
