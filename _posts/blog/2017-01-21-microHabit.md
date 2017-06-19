@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      微习惯-塑造更好的自己
-category: blog
+category: blog1
 tags: 微习惯
 favour: 微习惯
 description: 微习惯，日复一日，年复一年，完成一个又一个目标，塑造更好的自己。
