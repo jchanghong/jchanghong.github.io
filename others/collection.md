@@ -2,19 +2,19 @@
 layout:     collection
 ---
 
-## 工具
+## 工具和库
 
-* [box-shadow generator](http://www.cssmatic.com/box-shadow)
+* [orientdb多模型分布式数据库](http://orientdb.com/orientdb/)
 
-     生成 box-shadow 的在线工具。
+     纯java实现，适合用来做自己的存储引擎。
      
-* [tiny png](https://tinypng.com/)
+* [druid](https://github.com/alibaba/druid)
 
-     用于压缩 png 或 jpg 的在线工具
+     淘宝的数据库连接池和sql解析。自己用来作为数据库的前端sql解析
      
-* [二维码生成](http://www.liantu.com/)
+* [分布式数据网格](https://hazelcast.org/)
 
-    用于快速生成二维码的在线工具
+    开发分布式应用的工具
     
 * [html压缩](http://tool.lanrentuku.com/jsformat/)
 
@@ -24,14 +24,12 @@ layout:     collection
 
   md5加密解密在线工具
 
-## Other Blogs
+ * [github api](https://developer.github.com/v3/)
+   开发安卓客服端
 
-* [HyG](https://gaohaoyang.github.io)
-  
-  就职于阿里巴巴集团天猫事业部，前端开发工程师，花名川轼。
-  
-  本博客初版很多风格都是参考的这个博客(~只是风格上，代码上没有任何依赖~)
-  
-* [阮一峰的个人网站](http://www.ruanyifeng.com/)
+   -----
+## 其他
 
-  不多说，阮一峰老师的博客，里面的系列博文对我帮助很大。
+ 其他还有java ee的各种开源web框架和安卓框架
+ 不要重复发明轮子
+  除非是学习的目的
