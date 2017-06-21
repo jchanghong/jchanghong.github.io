@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      大学时代长虹公司实习项目-安卓app
+title:      大学时代实习项目-安卓图片app
 category: project
 tags:  java
 favour: java

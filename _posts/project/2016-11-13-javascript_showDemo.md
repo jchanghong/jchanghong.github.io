@@ -11,3 +11,4 @@ pic: https://jchanghong.github.io/jseffect-demo/staticresource/waterfallflow/dem
 technology: kotlin orientdb hazelcast netty
 description: kotlin和spring实现的分布式数据库
 ---
+主要用到了orientdb，hazelcast。java，kotlin。等等
