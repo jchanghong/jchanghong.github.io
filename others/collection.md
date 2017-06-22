@@ -24,6 +24,10 @@ layout:     collection
 
   md5加密解密在线工具
 
+* [awasome java](https://github.com/akullpp/awesome-java)
+
+ java程序员都需要了解的一些库
+
  * [github api](https://developer.github.com/v3/)
    开发安卓客服端
 
