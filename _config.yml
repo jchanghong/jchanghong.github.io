@@ -31,7 +31,11 @@ url: https://jchanghong.github.io
 title: jchanghong的个人主页
 description: 随笔
 author_info: <a href="https://jchanghong.github.io/">jchanghong</a>
-highlight: true
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 author :
   name : jchanghong
   nickName : jchanghong
